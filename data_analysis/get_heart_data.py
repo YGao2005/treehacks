@@ -5,7 +5,10 @@ import pandas as pd
 import argparse
 import heartpy as hp
 from tqdm import tqdm
+import warnings
 import matplotlib.pyplot as plt
+
+warnings.filterwarnings("ignore")
 
 def getargs():
     parser = argparse.ArgumentParser()
@@ -57,7 +60,7 @@ def get_heart_metrics(file_path):
         }
     
     except Exception as e:
-        print(f"Error in PPG analysis: {str(e)}")
+        #print(f"Error in PPG analysis: {str(e)}")
         hr_metrics = {
             'heart_rate': None,
             'hrv_rmssd': None,
@@ -65,14 +68,19 @@ def get_heart_metrics(file_path):
             'num_beats': None
         }
         sign = False
-    res = {**hr_metrics, **movement_metrics}
+
+    for val in hr_metrics.values():
+        if not val or np.isnan(val):
+            sign = False
+
+    res = {**hr_metrics}
     res = {key: [value] for key, value in res.items()}
     return pd.DataFrame(data=res), sign
 
 
 def get_ppg(in_dir):
     metadata = pd.read_csv(os.path.join(in_dir, "metadata.csv"), on_bad_lines='skip')
-    print(len(metadata))
+    print('extracting data from given ppg dataset...')
 
     data = {
         'regular': pd.DataFrame(),
@@ -90,10 +98,10 @@ def get_ppg(in_dir):
         if sign:
             data[file_path] = pd.concat([data[file_path], metrics], ignore_index=True)
 
-    data['regular'].to_csv('regular_ppg.csv')
-    data['irregular'].to_csv('irregular_ppg.csv')
-    data['afib'].to_csv('afib_ppg.csv')
-    data['unclassified'].to_csv('unclassified_ppg.csv')
+    data['regular'].to_csv('regular_ppg.csv', index=False)
+    data['irregular'].to_csv('irregular_ppg.csv', index=False)
+    data['afib'].to_csv('afib_ppg.csv', index=False)
+    data['unclassified'].to_csv('unclassified_ppg.csv', index=False)
 
     print('regular:', len(data['regular']))
     print('irregular:', len(data['irregular']))
