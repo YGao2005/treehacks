@@ -11,8 +11,6 @@ from google import generativeai as genai
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
-from data_analysis.heart_disease_prediction import FCNetwork, load_model, predict
-import joblib
 import pickle
 import os
 from datetime import datetime, timedelta
@@ -25,9 +23,6 @@ client = OpenAI(api_key=API_KEY, base_url="https://api.perplexity.ai")
 aiplatform.init(project="your-project-id", location="us-central1")
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 gemini_model = genai.GenerativeModel('gemini-pro')
-
-# NOTE: Load heartbeat data analysis model
-load_model(os.getenv("PT_DIR"), input_size=3, hidden_sizes=[64, 32], output_size=2)
 
 # Initialize Calendar service
 def get_calendar_service():
@@ -69,6 +64,47 @@ activity_df = pd.read_csv("activity_type.csv")
 destress_activities = set(activity_df[activity_df['Classification'] == 'De-stressor']['Activity'].str.lower())
 
 app = Flask(__name__)
+
+@app.route('/add_destresser_to_calendar', methods=['POST'])
+def add_destresser_to_calendar():
+    try:
+        # Get the destresser recommendations and date/time input
+        destresser_data = request.json.get('destresser_data')
+        date_time_input = request.json.get('date_time')
+
+        if not destresser_data or not date_time_input:
+            return jsonify({'error': 'Missing destresser_data or date_time input'}), 400
+
+        # Parse the date and time
+        try:
+            event_datetime = datetime.strptime(date_time_input, '%Y-%m-%dT%H:%M:%S')
+        except ValueError:
+            return jsonify({'error': 'Invalid date_time format. Use ISO format: YYYY-MM-DDTHH:MM:SS'}), 400
+
+        # Add each destresser place as an event
+        for destresser in destresser_data:
+            place = destresser['place']
+            activities = ", ".join(destresser['activities'])
+
+            event = {
+                'summary': f'Destresser: {place}',
+                'description': f"Activities: {activities}",
+                'start': {
+                    'dateTime': event_datetime.isoformat(),
+                    'timeZone': 'America/Los_Angeles',
+                },
+                'end': {
+                    'dateTime': (event_datetime + timedelta(hours=1)).isoformat(),
+                    'timeZone': 'America/Los_Angeles',
+                },
+            }
+
+            calendar_service.events().insert(calendarId='primary', body=event).execute()
+
+        return jsonify({'status': 'success', 'message': 'Destresser activities added to calendar'})
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 @app.route('/add_workout_to_calendar', methods=['POST'])
 def add_workout_to_calendar():
@@ -313,144 +349,6 @@ def get_workout_plan():
         return jsonify(workout_plan)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-
-
-@app.route('/create-event', methods=['POST'])
-def create_event():
-    try:
-        # Validate input
-        user_input = request.json.get('user_input')
-        if not user_input:
-            return jsonify({'error': 'No user input provided'}), 400
-
-        # Use Gemini to parse event details
-        prompt = f'''Generate a JSON event object for: {user_input}
-
-Return a single JSON object with these fields using this format:
-{{"title": "Event Title", "start_time": "2024-02-16T14:00:00+00:00", "end_time": "2024-02-16T15:00:00+00:00", "description": "Event description"}}
-
-Remember:
-- Use tomorrow's date where needed
-- Add duration to start_time to get end_time
-- Use PST timezone (UTC-07:00)
-- Include seconds as :00'''
-
-        # Get response from Gemini
-        response = gemini_model.generate_content(prompt)
-        response_text = response.text.strip()
-        print(f"Raw Gemini response: {response_text}")  # Debug log
-
-        # Clean the response
-        response_text = response_text.replace('```json', '').replace('```', '').strip()
-        response_text = ' '.join(response_text.split())  # Remove newlines
-        print(f"Cleaned response: {response_text}")  # Debug log
-
-        # Extract JSON
-        json_start = response_text.find('{')
-        json_end = response_text.rfind('}') + 1
-        if json_start == -1 or json_end == 0:
-            return jsonify({
-                'error': 'Could not find valid JSON in response',
-                'raw_response': response_text
-            }), 500
-
-        json_str = response_text[json_start:json_end]
-        print(f"Extracted JSON string: {json_str}")  # Debug log
-
-        # Parse JSON
-        event_details = json.loads(json_str)
-
-        # Validate fields
-        required_fields = ['title', 'start_time', 'end_time', 'description']
-        missing_fields = [field for field in required_fields if field not in event_details]
-        if missing_fields:
-            return jsonify({
-                'error': f'Missing required fields: {", ".join(missing_fields)}',
-                'received_fields': list(event_details.keys())
-            }), 500
-
-        # Create Calendar event
-        event = {
-            'summary': event_details['title'],
-            'description': event_details['description'],
-            'start': {
-                'dateTime': event_details['start_time'],
-                'timeZone': 'UTC',
-            },
-            'end': {
-                'dateTime': event_details['end_time'],
-                'timeZone': 'UTC',
-            },
-        }
-
-        # First, try to get the calendar ACL to check if your email is already added
-        your_email = "psdyangg@gmail.com"  # Replace with your actual email
-
-        try:
-            # Create the calendar event
-            calendar_event = calendar_service.events().insert(
-                calendarId='primary',
-                body=event
-            ).execute()
-
-            # Share the calendar with your personal account if not already shared
-            rule = {
-                'role': 'writer',
-                'scope': {
-                    'type': 'user',
-                    'value': your_email
-                }
-            }
-
-            calendar_service.acl().insert(
-                calendarId='primary',
-                body=rule
-            ).execute()
-
-        except Exception as calendar_error:
-            print(f"Calendar sharing error: {str(calendar_error)}")
-            # Continue with the response even if sharing fails
-            pass
-
-        return jsonify({
-            'status': 'success',
-            'event_details': event_details,
-            'event_link': calendar_event.get('htmlLink')
-        })
-
-    except json.JSONDecodeError as e:
-        print(f"JSON Decode Error: {str(e)}")  # Debug log
-        print(f"Attempted to parse: {json_str}")  # Debug log
-        return jsonify({
-            'error': 'Failed to parse JSON response',
-            'details': str(e),
-            'raw_response': response_text
-        }), 500
-    except Exception as e:
-        print(f"Unexpected error: {str(e)}")  # Debug log
-        return jsonify({
-            'error': 'Server error',
-            'details': str(e)
-        }), 500
-
-
-@app.route('/heart_disease_prediction', methods=['POST'])
-def heart_disease_prediction():
-    try:
-        # NOTE: in the format of a list: [bpm, hrv_rmssd, hrv_sdnn]
-        input = request.json.get("input")
-        (output, prob) = predict(input, os.getenv("PT_DIR"))
-        return jsonify({
-            'prediction': output,
-            'probabilities': prob,
-            'status': 'success'
-        })
-    except Exception as e:
-        print(f"Unexpected error: {str(e)}")  # Debug log
-        return jsonify({
-            'error': str(e),
-            'status': 'error'
-        }), 500
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5002, debug=True)

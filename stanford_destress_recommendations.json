@@ -1,34 +1,66 @@
 [
   {
-    "place": "Stanford University Arboretum",
-    "activities": "bird watching in nature"
+    "place": "Stanford Dish Loop Trail",
+    "activities": [
+      "spending time in nature",
+      "aerobic exercise (e.g., running)",
+      "mindfulness meditation"
+    ]
+  },
+  {
+    "place": "Rodin Sculpture Garden",
+    "activities": [
+      "engaging in creative arts (e.g., painting)",
+      "spending time in nature",
+      "mindfulness meditation"
+    ]
+  },
+  {
+    "place": "Palo Alto Baylands Nature Preserve",
+    "activities": [
+      "spending time in nature",
+      "deep breathing exercises",
+      "aerobic exercise (e.g., running)"
+    ]
+  },
+  {
+    "place": "Stanford Memorial Church",
+    "activities": [
+      "deep breathing exercises",
+      "mindfulness meditation",
+      "time management and planning"
+    ]
   },
   {
     "place": "Cantor Arts Center",
-    "activities": "visiting an art gallery"
+    "activities": [
+      "engaging in creative arts (e.g., painting)",
+      "socializing with friends and family",
+      "mindfulness meditation"
+    ]
   },
   {
     "place": "Stanford Shopping Center",
-    "activities": "going to a peaceful cafe"
+    "activities": [
+      "socializing with friends and family",
+      "time management and planning",
+      "aerobic exercise (e.g., running)"
+    ]
   },
   {
-    "place": "Palo Alto Farmers' Market",
-    "activities": "going to a farmer's market"
+    "place": "Hoover Tower",
+    "activities": [
+      "deep breathing exercises",
+      "time management and planning",
+      "mindfulness meditation"
+    ]
   },
   {
-    "place": "Stanford Theatre",
-    "activities": "watching a movie at a theater"
-  },
-  {
-    "place": "Elizabeth F. Gamble Garden",
-    "activities": "visiting a botanical garden"
-  },
-  {
-    "place": "Stanford Dish Trail",
-    "activities": "going to a scenic overlook"
-  },
-  {
-    "place": "Palo Alto Art Center",
-    "activities": "attending a painting workshop"
+    "place": "Foothills Nature Preserve",
+    "activities": [
+      "spending time in nature",
+      "practicing yoga",
+      "aerobic exercise (e.g., running)"
+    ]
   }
 ]
