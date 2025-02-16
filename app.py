@@ -375,8 +375,8 @@ def heart_disease_prediction():
         # NOTE: in the format of a list: [bpm, hrv_rmssd, hrv_sdnn]
         list1 = [72.66417352281226,48.668455142145376,46.93269563232047]
         list2 = [134.04549950544015,166.16410000354662,113.28498319687571]
-        input = request.json.get("input")
-        (output, prob) = predict(list1, os.getenv("PT_DIR"))
+        #input = request.json.get("input")
+        (output, prob) = predict(list2, os.getenv("PT_DIR"))
         return jsonify({
             'prediction': output,
             'probabilities': prob,
@@ -392,8 +392,8 @@ def heart_disease_prediction():
 @app.route('/get_stress_score', methods=['POST'])
 def get_stress_score():
     try:
-        data = request.json.get("data")
-        score = get_stress_level(data)
+        #data = request.json.get("input")
+        score = get_stress_level(in_dir='./stress_calc/')
         return jsonify({
                 'stress_score': score,
                 'status': 'success'

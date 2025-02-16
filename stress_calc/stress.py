@@ -4,9 +4,8 @@ import json
 import numpy as np
 import argparse
 
-def get_stress_level(data=None):
-    if not data:
-        data = json.load(open('message2.txt', 'r'))
+def get_stress_level(in_dir='.'):
+    data = json.load(open(os.path.join(in_dir,'message2.txt'), 'r'))
 
     heart_rate_data = data['data'][0]['heart_data']['heart_rate_data']['summary']
     avg_hrv_rmssd = heart_rate_data['avg_hrv_rmssd']
@@ -50,4 +49,4 @@ def get_stress_level(data=None):
 
 
 if __name__ == "__main__":
-    get_stats()
+    get_stress_level()
