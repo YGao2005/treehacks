@@ -1,10 +1,12 @@
-import argparse
 import os
+import argparse
+import joblib
 import numpy as np
 import pandas as pd
 import torch
 import torch.nn as nn
 import torch.optim as optim
+import torch.nn.functional as F
 from torch.utils.data import DataLoader, TensorDataset
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -27,7 +29,7 @@ class FCNetwork(nn.Module):
     def forward(self, x):
         return self.net(x)
 
-def load_and_preprocess_data(data_path, val_ratio=0.2, random_state=42):
+def load_and_preprocess_data(data_path, output_dir, val_ratio=0.2, random_state=42):
 
     # NOTE: Load 3 datasets separately
     # add their labels
@@ -67,6 +69,8 @@ def load_and_preprocess_data(data_path, val_ratio=0.2, random_state=42):
     X_train = scaler.fit_transform(X_train)
     X_val = scaler.transform(X_val)
     X_test = scaler.transform(X_test)
+
+    joblib.dump(scaler, os.path.join(output_dir, 'scaler.pkl'))
     
     return X_train, X_val, X_test, y_train, y_val, y_test, scaler
 
@@ -141,8 +145,27 @@ def train_model(model, train_loader, val_loader, criterion, optimizer,
                 'loss': val_loss,
                 'accuracy': val_acc
             }
-            torch.save(checkpoint, os.path.join(output_dir, 'best_model.pth'))
+            torch.save(checkpoint, os.path.join(output_dir, 'checkpoint.pth'))
             print(f'Checkpoint saved at epoch {epoch+1}')
+
+def load_model(pt_path, input_size=3, hidden_sizes=[64, 32], output_size=2):
+    model = FCNetwork(input_size=input_size, hidden_sizes=hidden_sizes, output_size=output_size)
+    checkpoint = torch.load(pt_path, weights_only=True)
+    model.load_state_dict(checkpoint['model_state_dict'])
+    return model
+
+
+def predict(instance, pt_dir, pt_file = 'checkpoint.pth', model=None):
+    if not model:
+        model = load_model(os.path.join(pt_dir, pt_file))
+    scaler = joblib.load(os.path.join(pt_dir, 'scaler.pkl'))
+    instance = torch.FloatTensor(instance).reshape(1, -1)
+    instance = torch.FloatTensor(scaler.transform(instance))
+    output = model(instance)
+    res = torch.argmax(output)
+    probs = F.softmax(output, dim=1).tolist()[0]
+    label_names = ['regular', 'irregular']
+    return label_names[res], probs
 
 def main():
     parser = argparse.ArgumentParser(description='Train a fully connected network for multiclass classification')
@@ -155,15 +178,24 @@ def main():
     parser.add_argument('--val_ratio', type=float, default=0.2, help='Validation set ratio')
     parser.add_argument('--seed', type=int, default=42, help='Random seed')
     parser.add_argument('--optimizer', default='sgd', help='optimizer of network')
+    parser.add_argument('--predict', action='store_true')
     args = parser.parse_args()
     
     # Set random seeds
     torch.manual_seed(args.seed)
     np.random.seed(args.seed)
-    
+
+    example = [72.66417352281226,48.668455142145376,46.93269563232047]
+    #example = [82.19289340101524,235.42250031313927,173.97601912929474]
+    if args.predict:
+        res, probs = predict(example, args.output_dir)
+        print("class:", res)
+        print("prob:", probs)
+        return
+
     # Load and preprocess data
     X_train, X_val, X_test, y_train, y_val, y_test, scaler = load_and_preprocess_data(
-        args.data_path, args.val_ratio, args.seed)
+        args.data_path, args.output_dir, args.val_ratio, args.seed)
 
     # Create dataloaders
     train_loader, val_loader = create_dataloaders(X_train, X_val, y_train, y_val, args.batch_size)
@@ -184,6 +216,7 @@ def main():
     # Train model
     train_model(model, train_loader, val_loader, criterion, optimizer, 
                 args.epochs, device, args.output_dir)
+
 
 
 if __name__ == '__main__':
