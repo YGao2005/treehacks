@@ -1,66 +1,66 @@
 [
   {
-    "place": "Stanford Dish Loop Trail",
+    "place": "Stanford Oval",
     "activities": [
       "spending time in nature",
-      "aerobic exercise (e.g., running)",
-      "mindfulness meditation"
-    ]
+      "aerobic exercise (e.g., running)"
+    ],
+    "duration": 1
   },
   {
     "place": "Rodin Sculpture Garden",
     "activities": [
       "engaging in creative arts (e.g., painting)",
-      "spending time in nature",
       "mindfulness meditation"
-    ]
+    ],
+    "duration": 1.5
   },
   {
-    "place": "Palo Alto Baylands Nature Preserve",
+    "place": "Palo Alto Baylands Nature Reserve",
     "activities": [
       "spending time in nature",
-      "deep breathing exercises",
-      "aerobic exercise (e.g., running)"
-    ]
+      "deep breathing exercises"
+    ],
+    "duration": 2
   },
   {
     "place": "Stanford Memorial Church",
     "activities": [
-      "deep breathing exercises",
       "mindfulness meditation",
-      "time management and planning"
-    ]
+      "deep breathing exercises"
+    ],
+    "duration": 0.5
   },
   {
-    "place": "Cantor Arts Center",
+    "place": "Hoover Tower",
     "activities": [
-      "engaging in creative arts (e.g., painting)",
-      "socializing with friends and family",
-      "mindfulness meditation"
-    ]
+      "time management and planning",
+      "deep breathing exercises"
+    ],
+    "duration": 1
   },
   {
     "place": "Stanford Shopping Center",
     "activities": [
       "socializing with friends and family",
-      "time management and planning",
-      "aerobic exercise (e.g., running)"
-    ]
+      "listening to music"
+    ],
+    "duration": 2
   },
   {
-    "place": "Hoover Tower",
+    "place": "The Dish hiking trail",
     "activities": [
-      "deep breathing exercises",
-      "time management and planning",
+      "aerobic exercise (e.g., running)",
+      "spending time in nature"
+    ],
+    "duration": 1.5
+  },
+  {
+    "place": "Cantor Arts Center",
+    "activities": [
+      "engaging in creative arts (e.g., painting)",
       "mindfulness meditation"
-    ]
-  },
-  {
-    "place": "Foothills Nature Preserve",
-    "activities": [
-      "spending time in nature",
-      "practicing yoga",
-      "aerobic exercise (e.g., running)"
-    ]
+    ],
+    "duration": 1.5
   }
 ]
