@@ -177,7 +177,7 @@ def create_event():
         - Include date, month, and year accurately in PST.
         - Derive the end_time by correctly adding the duration to the start_time.
         - Times must include seconds (:00) for both start_time and end_time.
-        - Automatically calculate tomorrow’s date from the current PST date if specified.
+        - Today's date is February 16th, 2025.
         - Return only the JSON object without any extra text, headers, or explanations.
         '''
 
