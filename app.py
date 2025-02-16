@@ -310,9 +310,9 @@ def get_destresser_recommendations():
 @app.route('/get_workout_plan', methods=['POST'])
 def get_workout_plan():
     try:
-        file_path = 'feb1.txt'
+        file_path = 'payload.txt'
         if not os.path.exists(file_path):
-            return jsonify({"error": "File 'feb1.txt' not found. Please ensure the file is uploaded."}), 400
+            return jsonify({"error": "File 'payload.txt' not found. Please ensure the file is uploaded."}), 400
 
         with open(file_path, 'r') as file:
             biometric_data = file.read()

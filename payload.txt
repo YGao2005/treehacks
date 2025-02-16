@@ -1,0 +1,1781 @@
+{
+    "user": {
+        "provider": "APPLE",
+        "active": true,
+        "user_id": "d7cab9b4-24d5-4cc4-973a-9410c30525cb"
+    },
+    "data": [
+        {
+            "metadata": {
+                "upload_type": 5,
+                "start_time": "2025-02-16T10:13:44+00:00",
+                "end_time": "2025-02-16T11:43:44+00:00",
+                "name": "Running",
+                "type": 102
+            },
+            "heart_rate_data": {
+                "detailed": {
+                    "hr_samples": [
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 0,
+                            "timestamp": "2025-02-16T10:13:44+00:00",
+                            "bpm": 115
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 13,
+                            "timestamp": "2025-02-16T10:25:44+00:00",
+                            "bpm": 81
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 26,
+                            "timestamp": "2025-02-16T10:37:44+00:00",
+                            "bpm": 137
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 39,
+                            "timestamp": "2025-02-16T10:49:44+00:00",
+                            "bpm": 93
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 52,
+                            "timestamp": "2025-02-16T11:01:44+00:00",
+                            "bpm": 101
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 65,
+                            "timestamp": "2025-02-16T11:13:44+00:00",
+                            "bpm": 81
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 78,
+                            "timestamp": "2025-02-16T11:25:44+00:00",
+                            "bpm": 177
+                        }
+                    ],
+                    "hrv_samples_sdnn": [
+                        {
+                            "timestamp": "2025-02-16T10:13:44+00:00",
+                            "hrv_sdnn": 55
+                        },
+                        {
+                            "timestamp": "2025-02-16T10:25:44+00:00",
+                            "hrv_sdnn": 85
+                        },
+                        {
+                            "timestamp": "2025-02-16T10:37:44+00:00",
+                            "hrv_sdnn": 79
+                        },
+                        {
+                            "timestamp": "2025-02-16T10:49:44+00:00",
+                            "hrv_sdnn": 115
+                        },
+                        {
+                            "timestamp": "2025-02-16T11:01:44+00:00",
+                            "hrv_sdnn": 85
+                        },
+                        {
+                            "timestamp": "2025-02-16T11:13:44+00:00",
+                            "hrv_sdnn": 112
+                        },
+                        {
+                            "timestamp": "2025-02-16T11:25:44+00:00",
+                            "hrv_sdnn": 88
+                        }
+                    ]
+                },
+                "summary": {
+                    "avg_hr_bpm": 112.14,
+                    "min_hr_bpm": 81,
+                    "max_hr_bpm": 177,
+                    "avg_hrv_sdnn": 88.43
+                }
+            },
+            "distance_data": {
+                "detailed": {
+                    "distance_samples": [
+                        {
+                            "timer_duration_seconds": 0,
+                            "timestamp": "2025-02-16T10:13:44+00:00",
+                            "distance_meters": 89.26274013117813
+                        },
+                        {
+                            "timer_duration_seconds": 13,
+                            "timestamp": "2025-02-16T10:25:44+00:00",
+                            "distance_meters": 52.402769713086165
+                        },
+                        {
+                            "timer_duration_seconds": 26,
+                            "timestamp": "2025-02-16T10:37:44+00:00",
+                            "distance_meters": 153.76071967839448
+                        },
+                        {
+                            "timer_duration_seconds": 39,
+                            "timestamp": "2025-02-16T10:49:44+00:00",
+                            "distance_meters": 176.2125810148583
+                        },
+                        {
+                            "timer_duration_seconds": 52,
+                            "timestamp": "2025-02-16T11:01:44+00:00",
+                            "distance_meters": 84.98379338718338
+                        },
+                        {
+                            "timer_duration_seconds": 65,
+                            "timestamp": "2025-02-16T11:13:44+00:00",
+                            "distance_meters": 124.76514768290757
+                        },
+                        {
+                            "timer_duration_seconds": 78,
+                            "timestamp": "2025-02-16T11:25:44+00:00",
+                            "distance_meters": 128.30736989999002
+                        }
+                    ],
+                    "elevation_samples": [
+                        {
+                            "timer_duration_seconds": 0,
+                            "timestamp": "2025-02-16T10:13:44+00:00",
+                            "elev_meters": 66.95846150945563
+                        },
+                        {
+                            "timer_duration_seconds": 13,
+                            "timestamp": "2025-02-16T10:25:44+00:00",
+                            "elev_meters": 127.09051978243696
+                        },
+                        {
+                            "timer_duration_seconds": 26,
+                            "timestamp": "2025-02-16T10:37:44+00:00",
+                            "elev_meters": 20.707194346918488
+                        },
+                        {
+                            "timer_duration_seconds": 39,
+                            "timestamp": "2025-02-16T10:49:44+00:00",
+                            "elev_meters": 177.9161134802012
+                        },
+                        {
+                            "timer_duration_seconds": 52,
+                            "timestamp": "2025-02-16T11:01:44+00:00",
+                            "elev_meters": 121.06395891629168
+                        },
+                        {
+                            "timer_duration_seconds": 65,
+                            "timestamp": "2025-02-16T11:13:44+00:00",
+                            "elev_meters": 215.8399550484329
+                        },
+                        {
+                            "timer_duration_seconds": 78,
+                            "timestamp": "2025-02-16T11:25:44+00:00",
+                            "elev_meters": 131.72779697889084
+                        }
+                    ]
+                },
+                "summary": {
+                    "distance_meters": 809.7,
+                    "elevation": {
+                        "gain_actual_meters": 215.84,
+                        "loss_actual_meters": 20.71
+                    }
+                }
+            },
+            "power_data": {
+                "power_samples": [
+                    {
+                        "timer_duration_seconds": 0,
+                        "timestamp": "2025-02-16T10:13:44+00:00",
+                        "watts": 17.843112736491804
+                    },
+                    {
+                        "timer_duration_seconds": 13,
+                        "timestamp": "2025-02-16T10:25:44+00:00",
+                        "watts": 96.9446138019566
+                    },
+                    {
+                        "timer_duration_seconds": 26,
+                        "timestamp": "2025-02-16T10:37:44+00:00",
+                        "watts": 32.917441450461055
+                    },
+                    {
+                        "timer_duration_seconds": 39,
+                        "timestamp": "2025-02-16T10:49:44+00:00",
+                        "watts": 98.1190066776046
+                    },
+                    {
+                        "timer_duration_seconds": 52,
+                        "timestamp": "2025-02-16T11:01:44+00:00",
+                        "watts": 80.08956149452807
+                    },
+                    {
+                        "timer_duration_seconds": 65,
+                        "timestamp": "2025-02-16T11:13:44+00:00",
+                        "watts": 82.81516193939345
+                    },
+                    {
+                        "timer_duration_seconds": 78,
+                        "timestamp": "2025-02-16T11:25:44+00:00",
+                        "watts": 49.929128764879245
+                    }
+                ],
+                "avg_watts": 65.52,
+                "max_watts": 98.12
+            },
+            "movement_data": {
+                "speed_samples": [
+                    {
+                        "timestamp": "2025-02-16T10:13:44+00:00",
+                        "speed_meters_per_second": 13.95814105341271
+                    },
+                    {
+                        "timestamp": "2025-02-16T10:25:44+00:00",
+                        "speed_meters_per_second": 9.623235122517674
+                    },
+                    {
+                        "timestamp": "2025-02-16T10:37:44+00:00",
+                        "speed_meters_per_second": 2.239172234045892
+                    },
+                    {
+                        "timestamp": "2025-02-16T10:49:44+00:00",
+                        "speed_meters_per_second": 4.893979602290127
+                    },
+                    {
+                        "timestamp": "2025-02-16T11:01:44+00:00",
+                        "speed_meters_per_second": 8.180713385816228
+                    },
+                    {
+                        "timestamp": "2025-02-16T11:13:44+00:00",
+                        "speed_meters_per_second": 6.794458412420198
+                    },
+                    {
+                        "timestamp": "2025-02-16T11:25:44+00:00",
+                        "speed_meters_per_second": 14.53086692560015
+                    }
+                ],
+                "avg_speed_meters_per_second": 8.6,
+                "max_speed_meters_per_second": 14.53
+            }
+        },
+        {
+            "metadata": {
+                "upload_type": 5,
+                "start_time": "2025-02-17T10:13:44+00:00",
+                "end_time": "2025-02-17T11:43:44+00:00",
+                "name": "Cycling",
+                "type": 112
+            },
+            "heart_rate_data": {
+                "detailed": {
+                    "hr_samples": [
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 0,
+                            "timestamp": "2025-02-17T10:13:44+00:00",
+                            "bpm": 91
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 13,
+                            "timestamp": "2025-02-17T10:25:44+00:00",
+                            "bpm": 147
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 26,
+                            "timestamp": "2025-02-17T10:37:44+00:00",
+                            "bpm": 177
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 39,
+                            "timestamp": "2025-02-17T10:49:44+00:00",
+                            "bpm": 111
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 52,
+                            "timestamp": "2025-02-17T11:01:44+00:00",
+                            "bpm": 98
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 65,
+                            "timestamp": "2025-02-17T11:13:44+00:00",
+                            "bpm": 161
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 78,
+                            "timestamp": "2025-02-17T11:25:44+00:00",
+                            "bpm": 84
+                        }
+                    ],
+                    "hrv_samples_sdnn": [
+                        {
+                            "timestamp": "2025-02-17T10:13:44+00:00",
+                            "hrv_sdnn": 115
+                        },
+                        {
+                            "timestamp": "2025-02-17T10:25:44+00:00",
+                            "hrv_sdnn": 91
+                        },
+                        {
+                            "timestamp": "2025-02-17T10:37:44+00:00",
+                            "hrv_sdnn": 71
+                        },
+                        {
+                            "timestamp": "2025-02-17T10:49:44+00:00",
+                            "hrv_sdnn": 85
+                        },
+                        {
+                            "timestamp": "2025-02-17T11:01:44+00:00",
+                            "hrv_sdnn": 95
+                        },
+                        {
+                            "timestamp": "2025-02-17T11:13:44+00:00",
+                            "hrv_sdnn": 63
+                        },
+                        {
+                            "timestamp": "2025-02-17T11:25:44+00:00",
+                            "hrv_sdnn": 115
+                        }
+                    ]
+                },
+                "summary": {
+                    "avg_hr_bpm": 124.14,
+                    "min_hr_bpm": 84,
+                    "max_hr_bpm": 177,
+                    "avg_hrv_sdnn": 90.71
+                }
+            },
+            "distance_data": {
+                "detailed": {
+                    "distance_samples": [
+                        {
+                            "timer_duration_seconds": 0,
+                            "timestamp": "2025-02-17T10:13:44+00:00",
+                            "distance_meters": 157.0880711092014
+                        },
+                        {
+                            "timer_duration_seconds": 13,
+                            "timestamp": "2025-02-17T10:25:44+00:00",
+                            "distance_meters": 134.76816789906522
+                        },
+                        {
+                            "timer_duration_seconds": 26,
+                            "timestamp": "2025-02-17T10:37:44+00:00",
+                            "distance_meters": 138.78703538343228
+                        },
+                        {
+                            "timer_duration_seconds": 39,
+                            "timestamp": "2025-02-17T10:49:44+00:00",
+                            "distance_meters": 20.14951615815933
+                        },
+                        {
+                            "timer_duration_seconds": 52,
+                            "timestamp": "2025-02-17T11:01:44+00:00",
+                            "distance_meters": 54.30079286200037
+                        },
+                        {
+                            "timer_duration_seconds": 65,
+                            "timestamp": "2025-02-17T11:13:44+00:00",
+                            "distance_meters": 156.63926246455162
+                        },
+                        {
+                            "timer_duration_seconds": 78,
+                            "timestamp": "2025-02-17T11:25:44+00:00",
+                            "distance_meters": 25.695402443591867
+                        }
+                    ],
+                    "elevation_samples": [
+                        {
+                            "timer_duration_seconds": 0,
+                            "timestamp": "2025-02-17T10:13:44+00:00",
+                            "elev_meters": 49.035243304970365
+                        },
+                        {
+                            "timer_duration_seconds": 13,
+                            "timestamp": "2025-02-17T10:25:44+00:00",
+                            "elev_meters": 166.16989840533165
+                        },
+                        {
+                            "timer_duration_seconds": 26,
+                            "timestamp": "2025-02-17T10:37:44+00:00",
+                            "elev_meters": 42.056424768050604
+                        },
+                        {
+                            "timer_duration_seconds": 39,
+                            "timestamp": "2025-02-17T10:49:44+00:00",
+                            "elev_meters": 192.81732727247265
+                        },
+                        {
+                            "timer_duration_seconds": 52,
+                            "timestamp": "2025-02-17T11:01:44+00:00",
+                            "elev_meters": 132.5327602706349
+                        },
+                        {
+                            "timer_duration_seconds": 65,
+                            "timestamp": "2025-02-17T11:13:44+00:00",
+                            "elev_meters": 125.67903066886961
+                        },
+                        {
+                            "timer_duration_seconds": 78,
+                            "timestamp": "2025-02-17T11:25:44+00:00",
+                            "elev_meters": 228.3844815515317
+                        }
+                    ]
+                },
+                "summary": {
+                    "distance_meters": 687.43,
+                    "elevation": {
+                        "gain_actual_meters": 228.38,
+                        "loss_actual_meters": 42.06
+                    }
+                }
+            },
+            "power_data": {
+                "power_samples": [
+                    {
+                        "timer_duration_seconds": 0,
+                        "timestamp": "2025-02-17T10:13:44+00:00",
+                        "watts": 70.55039199360127
+                    },
+                    {
+                        "timer_duration_seconds": 13,
+                        "timestamp": "2025-02-17T10:25:44+00:00",
+                        "watts": 46.48289893874162
+                    },
+                    {
+                        "timer_duration_seconds": 26,
+                        "timestamp": "2025-02-17T10:37:44+00:00",
+                        "watts": 78.98691884688319
+                    },
+                    {
+                        "timer_duration_seconds": 39,
+                        "timestamp": "2025-02-17T10:49:44+00:00",
+                        "watts": 17.877272681171817
+                    },
+                    {
+                        "timer_duration_seconds": 52,
+                        "timestamp": "2025-02-17T11:01:44+00:00",
+                        "watts": 60.671719634310534
+                    },
+                    {
+                        "timer_duration_seconds": 65,
+                        "timestamp": "2025-02-17T11:13:44+00:00",
+                        "watts": 30.47801529572236
+                    },
+                    {
+                        "timer_duration_seconds": 78,
+                        "timestamp": "2025-02-17T11:25:44+00:00",
+                        "watts": 91.85889307978023
+                    }
+                ],
+                "avg_watts": 56.7,
+                "max_watts": 91.86
+            },
+            "movement_data": {
+                "speed_samples": [
+                    {
+                        "timestamp": "2025-02-17T10:13:44+00:00",
+                        "speed_meters_per_second": 14.703472837124506
+                    },
+                    {
+                        "timestamp": "2025-02-17T10:25:44+00:00",
+                        "speed_meters_per_second": 9.712143857672412
+                    },
+                    {
+                        "timestamp": "2025-02-17T10:37:44+00:00",
+                        "speed_meters_per_second": 2.311887864184361
+                    },
+                    {
+                        "timestamp": "2025-02-17T10:49:44+00:00",
+                        "speed_meters_per_second": 3.9835213880770315
+                    },
+                    {
+                        "timestamp": "2025-02-17T11:01:44+00:00",
+                        "speed_meters_per_second": 5.327225946761896
+                    },
+                    {
+                        "timestamp": "2025-02-17T11:13:44+00:00",
+                        "speed_meters_per_second": 10.672221084100418
+                    },
+                    {
+                        "timestamp": "2025-02-17T11:25:44+00:00",
+                        "speed_meters_per_second": 9.692982406211879
+                    }
+                ],
+                "avg_speed_meters_per_second": 8.06,
+                "max_speed_meters_per_second": 14.7
+            }
+        },
+        {
+            "metadata": {
+                "upload_type": 5,
+                "start_time": "2025-02-18T10:13:44+00:00",
+                "end_time": "2025-02-18T11:43:44+00:00",
+                "name": "Swimming",
+                "type": 100
+            },
+            "heart_rate_data": {
+                "detailed": {
+                    "hr_samples": [
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 0,
+                            "timestamp": "2025-02-18T10:13:44+00:00",
+                            "bpm": 175
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 13,
+                            "timestamp": "2025-02-18T10:25:44+00:00",
+                            "bpm": 172
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 26,
+                            "timestamp": "2025-02-18T10:37:44+00:00",
+                            "bpm": 153
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 39,
+                            "timestamp": "2025-02-18T10:49:44+00:00",
+                            "bpm": 89
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 52,
+                            "timestamp": "2025-02-18T11:01:44+00:00",
+                            "bpm": 137
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 65,
+                            "timestamp": "2025-02-18T11:13:44+00:00",
+                            "bpm": 174
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 78,
+                            "timestamp": "2025-02-18T11:25:44+00:00",
+                            "bpm": 80
+                        }
+                    ],
+                    "hrv_samples_sdnn": [
+                        {
+                            "timestamp": "2025-02-18T10:13:44+00:00",
+                            "hrv_sdnn": 47
+                        },
+                        {
+                            "timestamp": "2025-02-18T10:25:44+00:00",
+                            "hrv_sdnn": 82
+                        },
+                        {
+                            "timestamp": "2025-02-18T10:37:44+00:00",
+                            "hrv_sdnn": 58
+                        },
+                        {
+                            "timestamp": "2025-02-18T10:49:44+00:00",
+                            "hrv_sdnn": 83
+                        },
+                        {
+                            "timestamp": "2025-02-18T11:01:44+00:00",
+                            "hrv_sdnn": 96
+                        },
+                        {
+                            "timestamp": "2025-02-18T11:13:44+00:00",
+                            "hrv_sdnn": 45
+                        },
+                        {
+                            "timestamp": "2025-02-18T11:25:44+00:00",
+                            "hrv_sdnn": 67
+                        }
+                    ]
+                },
+                "summary": {
+                    "avg_hr_bpm": 140.0,
+                    "min_hr_bpm": 80,
+                    "max_hr_bpm": 175,
+                    "avg_hrv_sdnn": 68.29
+                }
+            },
+            "distance_data": {
+                "detailed": {
+                    "distance_samples": [
+                        {
+                            "timer_duration_seconds": 0,
+                            "timestamp": "2025-02-18T10:13:44+00:00",
+                            "distance_meters": 175.91697843828638
+                        },
+                        {
+                            "timer_duration_seconds": 13,
+                            "timestamp": "2025-02-18T10:25:44+00:00",
+                            "distance_meters": 122.3232185899393
+                        },
+                        {
+                            "timer_duration_seconds": 26,
+                            "timestamp": "2025-02-18T10:37:44+00:00",
+                            "distance_meters": 162.7804380300327
+                        },
+                        {
+                            "timer_duration_seconds": 39,
+                            "timestamp": "2025-02-18T10:49:44+00:00",
+                            "distance_meters": 196.24049189735123
+                        },
+                        {
+                            "timer_duration_seconds": 52,
+                            "timestamp": "2025-02-18T11:01:44+00:00",
+                            "distance_meters": 57.794593119623705
+                        },
+                        {
+                            "timer_duration_seconds": 65,
+                            "timestamp": "2025-02-18T11:13:44+00:00",
+                            "distance_meters": 94.81169911133063
+                        },
+                        {
+                            "timer_duration_seconds": 78,
+                            "timestamp": "2025-02-18T11:25:44+00:00",
+                            "distance_meters": 167.79651345439822
+                        }
+                    ],
+                    "elevation_samples": [
+                        {
+                            "timer_duration_seconds": 0,
+                            "timestamp": "2025-02-18T10:13:44+00:00",
+                            "elev_meters": 296.63243726140325
+                        },
+                        {
+                            "timer_duration_seconds": 13,
+                            "timestamp": "2025-02-18T10:25:44+00:00",
+                            "elev_meters": 31.91436839529411
+                        },
+                        {
+                            "timer_duration_seconds": 26,
+                            "timestamp": "2025-02-18T10:37:44+00:00",
+                            "elev_meters": 172.75599097575522
+                        },
+                        {
+                            "timer_duration_seconds": 39,
+                            "timestamp": "2025-02-18T10:49:44+00:00",
+                            "elev_meters": 17.393778320023635
+                        },
+                        {
+                            "timer_duration_seconds": 52,
+                            "timestamp": "2025-02-18T11:01:44+00:00",
+                            "elev_meters": 95.11685646615878
+                        },
+                        {
+                            "timer_duration_seconds": 65,
+                            "timestamp": "2025-02-18T11:13:44+00:00",
+                            "elev_meters": 234.4827277535267
+                        },
+                        {
+                            "timer_duration_seconds": 78,
+                            "timestamp": "2025-02-18T11:25:44+00:00",
+                            "elev_meters": 84.1352605121984
+                        }
+                    ]
+                },
+                "summary": {
+                    "distance_meters": 977.66,
+                    "elevation": {
+                        "gain_actual_meters": 296.63,
+                        "loss_actual_meters": 17.39
+                    }
+                }
+            },
+            "power_data": {
+                "power_samples": [
+                    {
+                        "timer_duration_seconds": 0,
+                        "timestamp": "2025-02-18T10:13:44+00:00",
+                        "watts": 78.59077638900513
+                    },
+                    {
+                        "timer_duration_seconds": 13,
+                        "timestamp": "2025-02-18T10:25:44+00:00",
+                        "watts": 38.283996348529776
+                    },
+                    {
+                        "timer_duration_seconds": 26,
+                        "timestamp": "2025-02-18T10:37:44+00:00",
+                        "watts": 90.46103070110759
+                    },
+                    {
+                        "timer_duration_seconds": 39,
+                        "timestamp": "2025-02-18T10:49:44+00:00",
+                        "watts": 82.24385119669944
+                    },
+                    {
+                        "timer_duration_seconds": 52,
+                        "timestamp": "2025-02-18T11:01:44+00:00",
+                        "watts": 16.65173411598395
+                    },
+                    {
+                        "timer_duration_seconds": 65,
+                        "timestamp": "2025-02-18T11:13:44+00:00",
+                        "watts": 41.16222350217758
+                    },
+                    {
+                        "timer_duration_seconds": 78,
+                        "timestamp": "2025-02-18T11:25:44+00:00",
+                        "watts": 11.751368305982712
+                    }
+                ],
+                "avg_watts": 51.31,
+                "max_watts": 90.46
+            },
+            "movement_data": {
+                "speed_samples": [
+                    {
+                        "timestamp": "2025-02-18T10:13:44+00:00",
+                        "speed_meters_per_second": 13.734410828241115
+                    },
+                    {
+                        "timestamp": "2025-02-18T10:25:44+00:00",
+                        "speed_meters_per_second": 7.057054653440193
+                    },
+                    {
+                        "timestamp": "2025-02-18T10:37:44+00:00",
+                        "speed_meters_per_second": 6.843435248738533
+                    },
+                    {
+                        "timestamp": "2025-02-18T10:49:44+00:00",
+                        "speed_meters_per_second": 10.655795446776542
+                    },
+                    {
+                        "timestamp": "2025-02-18T11:01:44+00:00",
+                        "speed_meters_per_second": 11.485102655699498
+                    },
+                    {
+                        "timestamp": "2025-02-18T11:13:44+00:00",
+                        "speed_meters_per_second": 3.6065706739081302
+                    },
+                    {
+                        "timestamp": "2025-02-18T11:25:44+00:00",
+                        "speed_meters_per_second": 4.1622346853438215
+                    }
+                ],
+                "avg_speed_meters_per_second": 8.22,
+                "max_speed_meters_per_second": 13.73
+            }
+        },
+        {
+            "metadata": {
+                "upload_type": 5,
+                "start_time": "2025-02-19T10:13:44+00:00",
+                "end_time": "2025-02-19T11:43:44+00:00",
+                "name": "Yoga",
+                "type": 104
+            },
+            "heart_rate_data": {
+                "detailed": {
+                    "hr_samples": [
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 0,
+                            "timestamp": "2025-02-19T10:13:44+00:00",
+                            "bpm": 87
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 13,
+                            "timestamp": "2025-02-19T10:25:44+00:00",
+                            "bpm": 165
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 26,
+                            "timestamp": "2025-02-19T10:37:44+00:00",
+                            "bpm": 106
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 39,
+                            "timestamp": "2025-02-19T10:49:44+00:00",
+                            "bpm": 143
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 52,
+                            "timestamp": "2025-02-19T11:01:44+00:00",
+                            "bpm": 115
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 65,
+                            "timestamp": "2025-02-19T11:13:44+00:00",
+                            "bpm": 82
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 78,
+                            "timestamp": "2025-02-19T11:25:44+00:00",
+                            "bpm": 118
+                        }
+                    ],
+                    "hrv_samples_sdnn": [
+                        {
+                            "timestamp": "2025-02-19T10:13:44+00:00",
+                            "hrv_sdnn": 113
+                        },
+                        {
+                            "timestamp": "2025-02-19T10:25:44+00:00",
+                            "hrv_sdnn": 94
+                        },
+                        {
+                            "timestamp": "2025-02-19T10:37:44+00:00",
+                            "hrv_sdnn": 70
+                        },
+                        {
+                            "timestamp": "2025-02-19T10:49:44+00:00",
+                            "hrv_sdnn": 87
+                        },
+                        {
+                            "timestamp": "2025-02-19T11:01:44+00:00",
+                            "hrv_sdnn": 63
+                        },
+                        {
+                            "timestamp": "2025-02-19T11:13:44+00:00",
+                            "hrv_sdnn": 71
+                        },
+                        {
+                            "timestamp": "2025-02-19T11:25:44+00:00",
+                            "hrv_sdnn": 89
+                        }
+                    ]
+                },
+                "summary": {
+                    "avg_hr_bpm": 116.57,
+                    "min_hr_bpm": 82,
+                    "max_hr_bpm": 165,
+                    "avg_hrv_sdnn": 83.86
+                }
+            },
+            "distance_data": {
+                "detailed": {
+                    "distance_samples": [
+                        {
+                            "timer_duration_seconds": 0,
+                            "timestamp": "2025-02-19T10:13:44+00:00",
+                            "distance_meters": 64.444818706041
+                        },
+                        {
+                            "timer_duration_seconds": 13,
+                            "timestamp": "2025-02-19T10:25:44+00:00",
+                            "distance_meters": 168.61929833819238
+                        },
+                        {
+                            "timer_duration_seconds": 26,
+                            "timestamp": "2025-02-19T10:37:44+00:00",
+                            "distance_meters": 191.42927909660008
+                        },
+                        {
+                            "timer_duration_seconds": 39,
+                            "timestamp": "2025-02-19T10:49:44+00:00",
+                            "distance_meters": 125.77103362564563
+                        },
+                        {
+                            "timer_duration_seconds": 52,
+                            "timestamp": "2025-02-19T11:01:44+00:00",
+                            "distance_meters": 69.61762801260218
+                        },
+                        {
+                            "timer_duration_seconds": 65,
+                            "timestamp": "2025-02-19T11:13:44+00:00",
+                            "distance_meters": 57.91498050252809
+                        },
+                        {
+                            "timer_duration_seconds": 78,
+                            "timestamp": "2025-02-19T11:25:44+00:00",
+                            "distance_meters": 23.907434109983797
+                        }
+                    ],
+                    "elevation_samples": [
+                        {
+                            "timer_duration_seconds": 0,
+                            "timestamp": "2025-02-19T10:13:44+00:00",
+                            "elev_meters": 60.516590325691396
+                        },
+                        {
+                            "timer_duration_seconds": 13,
+                            "timestamp": "2025-02-19T10:25:44+00:00",
+                            "elev_meters": 51.00044477777932
+                        },
+                        {
+                            "timer_duration_seconds": 26,
+                            "timestamp": "2025-02-19T10:37:44+00:00",
+                            "elev_meters": 217.4648624370606
+                        },
+                        {
+                            "timer_duration_seconds": 39,
+                            "timestamp": "2025-02-19T10:49:44+00:00",
+                            "elev_meters": 152.76094985706817
+                        },
+                        {
+                            "timer_duration_seconds": 52,
+                            "timestamp": "2025-02-19T11:01:44+00:00",
+                            "elev_meters": 165.4535902799799
+                        },
+                        {
+                            "timer_duration_seconds": 65,
+                            "timestamp": "2025-02-19T11:13:44+00:00",
+                            "elev_meters": 58.47814133674045
+                        },
+                        {
+                            "timer_duration_seconds": 78,
+                            "timestamp": "2025-02-19T11:25:44+00:00",
+                            "elev_meters": 226.02363326062294
+                        }
+                    ]
+                },
+                "summary": {
+                    "distance_meters": 701.7,
+                    "elevation": {
+                        "gain_actual_meters": 226.02,
+                        "loss_actual_meters": 51.0
+                    }
+                }
+            },
+            "power_data": {
+                "power_samples": [
+                    {
+                        "timer_duration_seconds": 0,
+                        "timestamp": "2025-02-19T10:13:44+00:00",
+                        "watts": 12.534088011091159
+                    },
+                    {
+                        "timer_duration_seconds": 13,
+                        "timestamp": "2025-02-19T10:25:44+00:00",
+                        "watts": 14.041378276241154
+                    },
+                    {
+                        "timer_duration_seconds": 26,
+                        "timestamp": "2025-02-19T10:37:44+00:00",
+                        "watts": 77.89919621982698
+                    },
+                    {
+                        "timer_duration_seconds": 39,
+                        "timestamp": "2025-02-19T10:49:44+00:00",
+                        "watts": 94.68160121348463
+                    },
+                    {
+                        "timer_duration_seconds": 52,
+                        "timestamp": "2025-02-19T11:01:44+00:00",
+                        "watts": 58.10521817923228
+                    },
+                    {
+                        "timer_duration_seconds": 65,
+                        "timestamp": "2025-02-19T11:13:44+00:00",
+                        "watts": 75.95608986685757
+                    },
+                    {
+                        "timer_duration_seconds": 78,
+                        "timestamp": "2025-02-19T11:25:44+00:00",
+                        "watts": 93.10194941471477
+                    }
+                ],
+                "avg_watts": 60.9,
+                "max_watts": 94.68
+            },
+            "movement_data": {
+                "speed_samples": [
+                    {
+                        "timestamp": "2025-02-19T10:13:44+00:00",
+                        "speed_meters_per_second": 13.22451100438603
+                    },
+                    {
+                        "timestamp": "2025-02-19T10:25:44+00:00",
+                        "speed_meters_per_second": 12.378227205521126
+                    },
+                    {
+                        "timestamp": "2025-02-19T10:37:44+00:00",
+                        "speed_meters_per_second": 2.7860368870697343
+                    },
+                    {
+                        "timestamp": "2025-02-19T10:49:44+00:00",
+                        "speed_meters_per_second": 2.6941751161951077
+                    },
+                    {
+                        "timestamp": "2025-02-19T11:01:44+00:00",
+                        "speed_meters_per_second": 12.76985135518834
+                    },
+                    {
+                        "timestamp": "2025-02-19T11:13:44+00:00",
+                        "speed_meters_per_second": 13.863329410542736
+                    },
+                    {
+                        "timestamp": "2025-02-19T11:25:44+00:00",
+                        "speed_meters_per_second": 6.528901774443117
+                    }
+                ],
+                "avg_speed_meters_per_second": 9.18,
+                "max_speed_meters_per_second": 13.86
+            }
+        },
+        {
+            "metadata": {
+                "upload_type": 5,
+                "start_time": "2025-02-20T10:13:44+00:00",
+                "end_time": "2025-02-20T11:43:44+00:00",
+                "name": "Hiking",
+                "type": 109
+            },
+            "heart_rate_data": {
+                "detailed": {
+                    "hr_samples": [
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 0,
+                            "timestamp": "2025-02-20T10:13:44+00:00",
+                            "bpm": 169
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 13,
+                            "timestamp": "2025-02-20T10:25:44+00:00",
+                            "bpm": 93
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 26,
+                            "timestamp": "2025-02-20T10:37:44+00:00",
+                            "bpm": 106
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 39,
+                            "timestamp": "2025-02-20T10:49:44+00:00",
+                            "bpm": 99
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 52,
+                            "timestamp": "2025-02-20T11:01:44+00:00",
+                            "bpm": 171
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 65,
+                            "timestamp": "2025-02-20T11:13:44+00:00",
+                            "bpm": 178
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 78,
+                            "timestamp": "2025-02-20T11:25:44+00:00",
+                            "bpm": 82
+                        }
+                    ],
+                    "hrv_samples_sdnn": [
+                        {
+                            "timestamp": "2025-02-20T10:13:44+00:00",
+                            "hrv_sdnn": 120
+                        },
+                        {
+                            "timestamp": "2025-02-20T10:25:44+00:00",
+                            "hrv_sdnn": 110
+                        },
+                        {
+                            "timestamp": "2025-02-20T10:37:44+00:00",
+                            "hrv_sdnn": 113
+                        },
+                        {
+                            "timestamp": "2025-02-20T10:49:44+00:00",
+                            "hrv_sdnn": 111
+                        },
+                        {
+                            "timestamp": "2025-02-20T11:01:44+00:00",
+                            "hrv_sdnn": 62
+                        },
+                        {
+                            "timestamp": "2025-02-20T11:13:44+00:00",
+                            "hrv_sdnn": 70
+                        },
+                        {
+                            "timestamp": "2025-02-20T11:25:44+00:00",
+                            "hrv_sdnn": 118
+                        }
+                    ]
+                },
+                "summary": {
+                    "avg_hr_bpm": 128.29,
+                    "min_hr_bpm": 82,
+                    "max_hr_bpm": 178,
+                    "avg_hrv_sdnn": 100.57
+                }
+            },
+            "distance_data": {
+                "detailed": {
+                    "distance_samples": [
+                        {
+                            "timer_duration_seconds": 0,
+                            "timestamp": "2025-02-20T10:13:44+00:00",
+                            "distance_meters": 101.51773871251558
+                        },
+                        {
+                            "timer_duration_seconds": 13,
+                            "timestamp": "2025-02-20T10:25:44+00:00",
+                            "distance_meters": 133.83921351814683
+                        },
+                        {
+                            "timer_duration_seconds": 26,
+                            "timestamp": "2025-02-20T10:37:44+00:00",
+                            "distance_meters": 176.10996902944933
+                        },
+                        {
+                            "timer_duration_seconds": 39,
+                            "timestamp": "2025-02-20T10:49:44+00:00",
+                            "distance_meters": 168.19367329107885
+                        },
+                        {
+                            "timer_duration_seconds": 52,
+                            "timestamp": "2025-02-20T11:01:44+00:00",
+                            "distance_meters": 158.43378287452725
+                        },
+                        {
+                            "timer_duration_seconds": 65,
+                            "timestamp": "2025-02-20T11:13:44+00:00",
+                            "distance_meters": 155.51306057084003
+                        },
+                        {
+                            "timer_duration_seconds": 78,
+                            "timestamp": "2025-02-20T11:25:44+00:00",
+                            "distance_meters": 68.48542720107456
+                        }
+                    ],
+                    "elevation_samples": [
+                        {
+                            "timer_duration_seconds": 0,
+                            "timestamp": "2025-02-20T10:13:44+00:00",
+                            "elev_meters": 183.19898060140918
+                        },
+                        {
+                            "timer_duration_seconds": 13,
+                            "timestamp": "2025-02-20T10:25:44+00:00",
+                            "elev_meters": 104.18058866194588
+                        },
+                        {
+                            "timer_duration_seconds": 26,
+                            "timestamp": "2025-02-20T10:37:44+00:00",
+                            "elev_meters": 112.59042208153664
+                        },
+                        {
+                            "timer_duration_seconds": 39,
+                            "timestamp": "2025-02-20T10:49:44+00:00",
+                            "elev_meters": 125.82439219337404
+                        },
+                        {
+                            "timer_duration_seconds": 52,
+                            "timestamp": "2025-02-20T11:01:44+00:00",
+                            "elev_meters": 97.0205066408626
+                        },
+                        {
+                            "timer_duration_seconds": 65,
+                            "timestamp": "2025-02-20T11:13:44+00:00",
+                            "elev_meters": 267.62127806955226
+                        },
+                        {
+                            "timer_duration_seconds": 78,
+                            "timestamp": "2025-02-20T11:25:44+00:00",
+                            "elev_meters": 119.29495969145428
+                        }
+                    ]
+                },
+                "summary": {
+                    "distance_meters": 962.09,
+                    "elevation": {
+                        "gain_actual_meters": 267.62,
+                        "loss_actual_meters": 97.02
+                    }
+                }
+            },
+            "power_data": {
+                "power_samples": [
+                    {
+                        "timer_duration_seconds": 0,
+                        "timestamp": "2025-02-20T10:13:44+00:00",
+                        "watts": 11.28394216876168
+                    },
+                    {
+                        "timer_duration_seconds": 13,
+                        "timestamp": "2025-02-20T10:25:44+00:00",
+                        "watts": 95.23382852968281
+                    },
+                    {
+                        "timer_duration_seconds": 26,
+                        "timestamp": "2025-02-20T10:37:44+00:00",
+                        "watts": 97.63126641942874
+                    },
+                    {
+                        "timer_duration_seconds": 39,
+                        "timestamp": "2025-02-20T10:49:44+00:00",
+                        "watts": 68.00503658386955
+                    },
+                    {
+                        "timer_duration_seconds": 52,
+                        "timestamp": "2025-02-20T11:01:44+00:00",
+                        "watts": 76.77679437038782
+                    },
+                    {
+                        "timer_duration_seconds": 65,
+                        "timestamp": "2025-02-20T11:13:44+00:00",
+                        "watts": 44.52681116716395
+                    },
+                    {
+                        "timer_duration_seconds": 78,
+                        "timestamp": "2025-02-20T11:25:44+00:00",
+                        "watts": 72.29642857430598
+                    }
+                ],
+                "avg_watts": 66.54,
+                "max_watts": 97.63
+            },
+            "movement_data": {
+                "speed_samples": [
+                    {
+                        "timestamp": "2025-02-20T10:13:44+00:00",
+                        "speed_meters_per_second": 7.221923003797936
+                    },
+                    {
+                        "timestamp": "2025-02-20T10:25:44+00:00",
+                        "speed_meters_per_second": 10.858494565687172
+                    },
+                    {
+                        "timestamp": "2025-02-20T10:37:44+00:00",
+                        "speed_meters_per_second": 6.0589595094010775
+                    },
+                    {
+                        "timestamp": "2025-02-20T10:49:44+00:00",
+                        "speed_meters_per_second": 14.410313426211554
+                    },
+                    {
+                        "timestamp": "2025-02-20T11:01:44+00:00",
+                        "speed_meters_per_second": 3.9792610355355595
+                    },
+                    {
+                        "timestamp": "2025-02-20T11:13:44+00:00",
+                        "speed_meters_per_second": 8.084962805862252
+                    },
+                    {
+                        "timestamp": "2025-02-20T11:25:44+00:00",
+                        "speed_meters_per_second": 2.762338586869657
+                    }
+                ],
+                "avg_speed_meters_per_second": 7.63,
+                "max_speed_meters_per_second": 14.41
+            }
+        },
+        {
+            "metadata": {
+                "upload_type": 5,
+                "start_time": "2025-02-21T10:13:44+00:00",
+                "end_time": "2025-02-21T11:43:44+00:00",
+                "name": "Tennis",
+                "type": 115
+            },
+            "heart_rate_data": {
+                "detailed": {
+                    "hr_samples": [
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 0,
+                            "timestamp": "2025-02-21T10:13:44+00:00",
+                            "bpm": 140
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 13,
+                            "timestamp": "2025-02-21T10:25:44+00:00",
+                            "bpm": 180
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 26,
+                            "timestamp": "2025-02-21T10:37:44+00:00",
+                            "bpm": 124
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 39,
+                            "timestamp": "2025-02-21T10:49:44+00:00",
+                            "bpm": 118
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 52,
+                            "timestamp": "2025-02-21T11:01:44+00:00",
+                            "bpm": 132
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 65,
+                            "timestamp": "2025-02-21T11:13:44+00:00",
+                            "bpm": 142
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 78,
+                            "timestamp": "2025-02-21T11:25:44+00:00",
+                            "bpm": 108
+                        }
+                    ],
+                    "hrv_samples_sdnn": [
+                        {
+                            "timestamp": "2025-02-21T10:13:44+00:00",
+                            "hrv_sdnn": 56
+                        },
+                        {
+                            "timestamp": "2025-02-21T10:25:44+00:00",
+                            "hrv_sdnn": 44
+                        },
+                        {
+                            "timestamp": "2025-02-21T10:37:44+00:00",
+                            "hrv_sdnn": 40
+                        },
+                        {
+                            "timestamp": "2025-02-21T10:49:44+00:00",
+                            "hrv_sdnn": 75
+                        },
+                        {
+                            "timestamp": "2025-02-21T11:01:44+00:00",
+                            "hrv_sdnn": 64
+                        },
+                        {
+                            "timestamp": "2025-02-21T11:13:44+00:00",
+                            "hrv_sdnn": 83
+                        },
+                        {
+                            "timestamp": "2025-02-21T11:25:44+00:00",
+                            "hrv_sdnn": 42
+                        }
+                    ]
+                },
+                "summary": {
+                    "avg_hr_bpm": 134.86,
+                    "min_hr_bpm": 108,
+                    "max_hr_bpm": 180,
+                    "avg_hrv_sdnn": 57.71
+                }
+            },
+            "distance_data": {
+                "detailed": {
+                    "distance_samples": [
+                        {
+                            "timer_duration_seconds": 0,
+                            "timestamp": "2025-02-21T10:13:44+00:00",
+                            "distance_meters": 131.46027606813425
+                        },
+                        {
+                            "timer_duration_seconds": 13,
+                            "timestamp": "2025-02-21T10:25:44+00:00",
+                            "distance_meters": 25.666652154389894
+                        },
+                        {
+                            "timer_duration_seconds": 26,
+                            "timestamp": "2025-02-21T10:37:44+00:00",
+                            "distance_meters": 38.67210052092474
+                        },
+                        {
+                            "timer_duration_seconds": 39,
+                            "timestamp": "2025-02-21T10:49:44+00:00",
+                            "distance_meters": 88.83038359436031
+                        },
+                        {
+                            "timer_duration_seconds": 52,
+                            "timestamp": "2025-02-21T11:01:44+00:00",
+                            "distance_meters": 115.02151274163204
+                        },
+                        {
+                            "timer_duration_seconds": 65,
+                            "timestamp": "2025-02-21T11:13:44+00:00",
+                            "distance_meters": 183.6658099115841
+                        },
+                        {
+                            "timer_duration_seconds": 78,
+                            "timestamp": "2025-02-21T11:25:44+00:00",
+                            "distance_meters": 116.26178372149634
+                        }
+                    ],
+                    "elevation_samples": [
+                        {
+                            "timer_duration_seconds": 0,
+                            "timestamp": "2025-02-21T10:13:44+00:00",
+                            "elev_meters": 180.2924460988781
+                        },
+                        {
+                            "timer_duration_seconds": 13,
+                            "timestamp": "2025-02-21T10:25:44+00:00",
+                            "elev_meters": 86.76852754082695
+                        },
+                        {
+                            "timer_duration_seconds": 26,
+                            "timestamp": "2025-02-21T10:37:44+00:00",
+                            "elev_meters": 251.44174511760198
+                        },
+                        {
+                            "timer_duration_seconds": 39,
+                            "timestamp": "2025-02-21T10:49:44+00:00",
+                            "elev_meters": 47.285769279629186
+                        },
+                        {
+                            "timer_duration_seconds": 52,
+                            "timestamp": "2025-02-21T11:01:44+00:00",
+                            "elev_meters": 110.7071369311857
+                        },
+                        {
+                            "timer_duration_seconds": 65,
+                            "timestamp": "2025-02-21T11:13:44+00:00",
+                            "elev_meters": 142.90566055063042
+                        },
+                        {
+                            "timer_duration_seconds": 78,
+                            "timestamp": "2025-02-21T11:25:44+00:00",
+                            "elev_meters": 109.11711823764169
+                        }
+                    ]
+                },
+                "summary": {
+                    "distance_meters": 699.58,
+                    "elevation": {
+                        "gain_actual_meters": 251.44,
+                        "loss_actual_meters": 47.29
+                    }
+                }
+            },
+            "power_data": {
+                "power_samples": [
+                    {
+                        "timer_duration_seconds": 0,
+                        "timestamp": "2025-02-21T10:13:44+00:00",
+                        "watts": 29.29938137903243
+                    },
+                    {
+                        "timer_duration_seconds": 13,
+                        "timestamp": "2025-02-21T10:25:44+00:00",
+                        "watts": 71.54054318924071
+                    },
+                    {
+                        "timer_duration_seconds": 26,
+                        "timestamp": "2025-02-21T10:37:44+00:00",
+                        "watts": 53.75047818270214
+                    },
+                    {
+                        "timer_duration_seconds": 39,
+                        "timestamp": "2025-02-21T10:49:44+00:00",
+                        "watts": 15.805511824277332
+                    },
+                    {
+                        "timer_duration_seconds": 52,
+                        "timestamp": "2025-02-21T11:01:44+00:00",
+                        "watts": 35.992364806157724
+                    },
+                    {
+                        "timer_duration_seconds": 65,
+                        "timestamp": "2025-02-21T11:13:44+00:00",
+                        "watts": 89.52074614985894
+                    },
+                    {
+                        "timer_duration_seconds": 78,
+                        "timestamp": "2025-02-21T11:25:44+00:00",
+                        "watts": 95.60595992191531
+                    }
+                ],
+                "avg_watts": 55.93,
+                "max_watts": 95.61
+            },
+            "movement_data": {
+                "speed_samples": [
+                    {
+                        "timestamp": "2025-02-21T10:13:44+00:00",
+                        "speed_meters_per_second": 6.794919471147387
+                    },
+                    {
+                        "timestamp": "2025-02-21T10:25:44+00:00",
+                        "speed_meters_per_second": 8.27690245458649
+                    },
+                    {
+                        "timestamp": "2025-02-21T10:37:44+00:00",
+                        "speed_meters_per_second": 5.512405691037408
+                    },
+                    {
+                        "timestamp": "2025-02-21T10:49:44+00:00",
+                        "speed_meters_per_second": 4.930244670839537
+                    },
+                    {
+                        "timestamp": "2025-02-21T11:01:44+00:00",
+                        "speed_meters_per_second": 10.699247385901305
+                    },
+                    {
+                        "timestamp": "2025-02-21T11:13:44+00:00",
+                        "speed_meters_per_second": 10.863815691780228
+                    },
+                    {
+                        "timestamp": "2025-02-21T11:25:44+00:00",
+                        "speed_meters_per_second": 10.070337310519086
+                    }
+                ],
+                "avg_speed_meters_per_second": 8.16,
+                "max_speed_meters_per_second": 10.86
+            }
+        },
+        {
+            "metadata": {
+                "upload_type": 5,
+                "start_time": "2025-02-22T10:13:44+00:00",
+                "end_time": "2025-02-22T11:43:44+00:00",
+                "name": "Rowing",
+                "type": 106
+            },
+            "heart_rate_data": {
+                "detailed": {
+                    "hr_samples": [
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 0,
+                            "timestamp": "2025-02-22T10:13:44+00:00",
+                            "bpm": 163
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 13,
+                            "timestamp": "2025-02-22T10:25:44+00:00",
+                            "bpm": 82
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 26,
+                            "timestamp": "2025-02-22T10:37:44+00:00",
+                            "bpm": 156
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 39,
+                            "timestamp": "2025-02-22T10:49:44+00:00",
+                            "bpm": 134
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 52,
+                            "timestamp": "2025-02-22T11:01:44+00:00",
+                            "bpm": 168
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 65,
+                            "timestamp": "2025-02-22T11:13:44+00:00",
+                            "bpm": 167
+                        },
+                        {
+                            "context": 0,
+                            "timer_duration_seconds": 78,
+                            "timestamp": "2025-02-22T11:25:44+00:00",
+                            "bpm": 144
+                        }
+                    ],
+                    "hrv_samples_sdnn": [
+                        {
+                            "timestamp": "2025-02-22T10:13:44+00:00",
+                            "hrv_sdnn": 70
+                        },
+                        {
+                            "timestamp": "2025-02-22T10:25:44+00:00",
+                            "hrv_sdnn": 66
+                        },
+                        {
+                            "timestamp": "2025-02-22T10:37:44+00:00",
+                            "hrv_sdnn": 45
+                        },
+                        {
+                            "timestamp": "2025-02-22T10:49:44+00:00",
+                            "hrv_sdnn": 120
+                        },
+                        {
+                            "timestamp": "2025-02-22T11:01:44+00:00",
+                            "hrv_sdnn": 117
+                        },
+                        {
+                            "timestamp": "2025-02-22T11:13:44+00:00",
+                            "hrv_sdnn": 89
+                        },
+                        {
+                            "timestamp": "2025-02-22T11:25:44+00:00",
+                            "hrv_sdnn": 110
+                        }
+                    ]
+                },
+                "summary": {
+                    "avg_hr_bpm": 144.86,
+                    "min_hr_bpm": 82,
+                    "max_hr_bpm": 168,
+                    "avg_hrv_sdnn": 88.14
+                }
+            },
+            "distance_data": {
+                "detailed": {
+                    "distance_samples": [
+                        {
+                            "timer_duration_seconds": 0,
+                            "timestamp": "2025-02-22T10:13:44+00:00",
+                            "distance_meters": 115.88271273896335
+                        },
+                        {
+                            "timer_duration_seconds": 13,
+                            "timestamp": "2025-02-22T10:25:44+00:00",
+                            "distance_meters": 119.54542144400556
+                        },
+                        {
+                            "timer_duration_seconds": 26,
+                            "timestamp": "2025-02-22T10:37:44+00:00",
+                            "distance_meters": 69.3329547988591
+                        },
+                        {
+                            "timer_duration_seconds": 39,
+                            "timestamp": "2025-02-22T10:49:44+00:00",
+                            "distance_meters": 176.73968965110055
+                        },
+                        {
+                            "timer_duration_seconds": 52,
+                            "timestamp": "2025-02-22T11:01:44+00:00",
+                            "distance_meters": 132.69425215029543
+                        },
+                        {
+                            "timer_duration_seconds": 65,
+                            "timestamp": "2025-02-22T11:13:44+00:00",
+                            "distance_meters": 82.1647937439262
+                        },
+                        {
+                            "timer_duration_seconds": 78,
+                            "timestamp": "2025-02-22T11:25:44+00:00",
+                            "distance_meters": 157.22526236702225
+                        }
+                    ],
+                    "elevation_samples": [
+                        {
+                            "timer_duration_seconds": 0,
+                            "timestamp": "2025-02-22T10:13:44+00:00",
+                            "elev_meters": 187.86600235550927
+                        },
+                        {
+                            "timer_duration_seconds": 13,
+                            "timestamp": "2025-02-22T10:25:44+00:00",
+                            "elev_meters": 55.800343167011356
+                        },
+                        {
+                            "timer_duration_seconds": 26,
+                            "timestamp": "2025-02-22T10:37:44+00:00",
+                            "elev_meters": 271.358438179694
+                        },
+                        {
+                            "timer_duration_seconds": 39,
+                            "timestamp": "2025-02-22T10:49:44+00:00",
+                            "elev_meters": 288.2424201586308
+                        },
+                        {
+                            "timer_duration_seconds": 52,
+                            "timestamp": "2025-02-22T11:01:44+00:00",
+                            "elev_meters": 5.073809874182478
+                        },
+                        {
+                            "timer_duration_seconds": 65,
+                            "timestamp": "2025-02-22T11:13:44+00:00",
+                            "elev_meters": 166.91705730636536
+                        },
+                        {
+                            "timer_duration_seconds": 78,
+                            "timestamp": "2025-02-22T11:25:44+00:00",
+                            "elev_meters": 14.389604276517865
+                        }
+                    ]
+                },
+                "summary": {
+                    "distance_meters": 853.59,
+                    "elevation": {
+                        "gain_actual_meters": 288.24,
+                        "loss_actual_meters": 5.07
+                    }
+                }
+            },
+            "power_data": {
+                "power_samples": [
+                    {
+                        "timer_duration_seconds": 0,
+                        "timestamp": "2025-02-22T10:13:44+00:00",
+                        "watts": 25.156337304896663
+                    },
+                    {
+                        "timer_duration_seconds": 13,
+                        "timestamp": "2025-02-22T10:25:44+00:00",
+                        "watts": 50.24207640391459
+                    },
+                    {
+                        "timer_duration_seconds": 26,
+                        "timestamp": "2025-02-22T10:37:44+00:00",
+                        "watts": 68.70886390165242
+                    },
+                    {
+                        "timer_duration_seconds": 39,
+                        "timestamp": "2025-02-22T10:49:44+00:00",
+                        "watts": 21.904202202406797
+                    },
+                    {
+                        "timer_duration_seconds": 52,
+                        "timestamp": "2025-02-22T11:01:44+00:00",
+                        "watts": 51.17946163426141
+                    },
+                    {
+                        "timer_duration_seconds": 65,
+                        "timestamp": "2025-02-22T11:13:44+00:00",
+                        "watts": 44.39861666923293
+                    },
+                    {
+                        "timer_duration_seconds": 78,
+                        "timestamp": "2025-02-22T11:25:44+00:00",
+                        "watts": 67.803476089302
+                    }
+                ],
+                "avg_watts": 47.06,
+                "max_watts": 68.71
+            },
+            "movement_data": {
+                "speed_samples": [
+                    {
+                        "timestamp": "2025-02-22T10:13:44+00:00",
+                        "speed_meters_per_second": 6.747877306431054
+                    },
+                    {
+                        "timestamp": "2025-02-22T10:25:44+00:00",
+                        "speed_meters_per_second": 3.672044298705723
+                    },
+                    {
+                        "timestamp": "2025-02-22T10:37:44+00:00",
+                        "speed_meters_per_second": 14.479467041226592
+                    },
+                    {
+                        "timestamp": "2025-02-22T10:49:44+00:00",
+                        "speed_meters_per_second": 5.676430676387196
+                    },
+                    {
+                        "timestamp": "2025-02-22T11:01:44+00:00",
+                        "speed_meters_per_second": 6.242452755705551
+                    },
+                    {
+                        "timestamp": "2025-02-22T11:13:44+00:00",
+                        "speed_meters_per_second": 6.430812240640632
+                    },
+                    {
+                        "timestamp": "2025-02-22T11:25:44+00:00",
+                        "speed_meters_per_second": 14.337362141939948
+                    }
+                ],
+                "avg_speed_meters_per_second": 8.23,
+                "max_speed_meters_per_second": 14.48
+            }
+        }
+    ],
+    "type": "activity"
+}
