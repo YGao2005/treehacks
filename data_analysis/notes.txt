@@ -1,0 +1,9 @@
+things I can do with this data:
+
+train machine learning model -> just classify a person as normal or not normal? not normal is exactly what way, maybe that is better.
+
+visualize the graph of their blood differences across time.
+- it looks pretty flat to me, I don't quite know really.
+
+let LLM generate if this person is good or not.
+- this is deviating if they are putting in effort!!!
