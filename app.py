@@ -373,8 +373,10 @@ def get_workout_plan():
 def heart_disease_prediction():
     try:
         # NOTE: in the format of a list: [bpm, hrv_rmssd, hrv_sdnn]
+        list1 = [72.66417352281226,48.668455142145376,46.93269563232047]
+        list2 = [134.04549950544015,166.16410000354662,113.28498319687571]
         input = request.json.get("input")
-        (output, prob) = predict(input, os.getenv("PT_DIR"))
+        (output, prob) = predict(list1, os.getenv("PT_DIR"))
         return jsonify({
             'prediction': output,
             'probabilities': prob,
