@@ -85,6 +85,7 @@ def add_destresser_to_calendar():
         for destresser in destresser_data:
             place = destresser['place']
             activities = ", ".join(destresser['activities'])
+            duration = destresser.get('duration', 1)  # Default to 1 hour if not provided
 
             event = {
                 'summary': f'Destresser: {place}',
@@ -94,7 +95,7 @@ def add_destresser_to_calendar():
                     'timeZone': 'America/Los_Angeles',
                 },
                 'end': {
-                    'dateTime': (event_datetime + timedelta(hours=1)).isoformat(),
+                    'dateTime': (event_datetime + timedelta(hours=duration)).isoformat(),
                     'timeZone': 'America/Los_Angeles',
                 },
             }
@@ -249,14 +250,15 @@ def get_destresser_recommendations():
         if not request.is_json:
             return jsonify({"error": "Invalid request format. Expecting JSON payload."}), 400
 
-        request_data = request.get_json()
-
+        # Generate recommendations with dynamically calculated durations
         filtered_prompt = (
-                "Return a list of 8 suitable places near Stanford University as a JSON array. "
-                "Each element should have a 'place' and 'activities' properties. "
-                "The activities should be chosen from this list: " +
-                ", ".join(list(destress_activities)[:40]) +
-                ". Return ONLY the JSON array with no additional text or explanation."
+            "Return a list of 8 suitable places near Stanford University as a JSON array. "
+            "Each element should have 'place', 'activities', and 'duration' properties. "
+            "The 'activities' should be chosen from this list: " +
+            ", ".join(list(destress_activities)[:40]) +
+            ". The 'duration' should be a number between 0.5 and 2 hours, "
+            "representing the estimated time needed for the activities at the place. "
+            "Return ONLY the JSON array with no additional text or explanation."
         )
 
         response = client.chat.completions.create(
@@ -280,6 +282,17 @@ def get_destresser_recommendations():
         try:
             recommendations = json.loads(content)
 
+            # Validate and adjust durations to ensure they are between 0.5 and 2 hours
+            for recommendation in recommendations:
+                duration = recommendation.get('duration', 1)  # Default to 1 hour if not provided
+                # Ensure duration is within the specified range
+                if duration < 0.5:
+                    duration = 0.5
+                elif duration > 2:
+                    duration = 2
+                recommendation['duration'] = duration
+
+            # Save recommendations to a file (optional)
             with open("stanford_destress_recommendations.json", "w") as f:
                 json.dump(recommendations, f, indent=2)
 
