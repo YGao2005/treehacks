@@ -148,16 +148,16 @@ def train_model(model, train_loader, val_loader, criterion, optimizer,
             torch.save(checkpoint, os.path.join(output_dir, 'checkpoint.pth'))
             print(f'Checkpoint saved at epoch {epoch+1}')
 
-def load_model(pt_path, input_size=3, hidden_sizes=[64, 32], output_size=2):
+def load_model(pt_dir, input_size=3, hidden_sizes=[64, 32], output_size=2):
     model = FCNetwork(input_size=input_size, hidden_sizes=hidden_sizes, output_size=output_size)
-    checkpoint = torch.load(pt_path, weights_only=True)
+    checkpoint = torch.load(os.path.join(pt_dir, 'checkpoint.pth'), weights_only=True)
     model.load_state_dict(checkpoint['model_state_dict'])
     return model
 
 
-def predict(instance, pt_dir, pt_file = 'checkpoint.pth', model=None):
+def predict(instance, pt_dir, model=None):
     if not model:
-        model = load_model(os.path.join(pt_dir, pt_file))
+        model = load_model(pt_dir)
     scaler = joblib.load(os.path.join(pt_dir, 'scaler.pkl'))
     instance = torch.FloatTensor(instance).reshape(1, -1)
     instance = torch.FloatTensor(scaler.transform(instance))
@@ -165,7 +165,7 @@ def predict(instance, pt_dir, pt_file = 'checkpoint.pth', model=None):
     res = torch.argmax(output)
     probs = F.softmax(output, dim=1).tolist()[0]
     label_names = ['regular', 'irregular']
-    return label_names[res], probs
+    return (label_names[res], probs)
 
 def main():
     parser = argparse.ArgumentParser(description='Train a fully connected network for multiclass classification')
