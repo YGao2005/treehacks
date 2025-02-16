@@ -4,11 +4,11 @@ import json
 import numpy as np
 import argparse
 
-def get_stats():
-    data = json.load(open('message2.txt', 'r'))
+def get_stress_level(data=None):
+    if not data:
+        data = json.load(open('message2.txt', 'r'))
 
     heart_rate_data = data['data'][0]['heart_data']['heart_rate_data']['summary']
-    print(heart_rate_data)
     avg_hrv_rmssd = heart_rate_data['avg_hrv_rmssd']
     avg_hrv_sdnn = heart_rate_data['avg_hrv_sdnn']
     avg_bpm = heart_rate_data['avg_hr_bpm']
@@ -46,7 +46,7 @@ def get_stats():
     # NOTE: hydration value
     stress_val = hr_fluctuations_metric* 0.25 + blood_pressure_metric * 0.2 + glucose_metric * 0.15 + \
         temp_metric * 0.15 + hrv_sdnn_metric * 0.15 + oxygen_metric * 0.1
-    print(stress_val)
+    return stress_val / 10
 
 
 if __name__ == "__main__":

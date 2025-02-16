@@ -12,7 +12,8 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 import pickle
-import os
+from data_analysis.heart_disease_prediction import FCNetwork, load_model, predict
+from stress_calc.stress import get_stress_level
 from datetime import datetime, timedelta
 from google.oauth2 import service_account
 
@@ -23,6 +24,10 @@ client = OpenAI(api_key=API_KEY, base_url="https://api.perplexity.ai")
 aiplatform.init(project="your-project-id", location="us-central1")
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 gemini_model = genai.GenerativeModel('gemini-pro')
+
+# NOTE: Load heartbeat data analysis model
+load_model(os.getenv("PT_DIR"), input_size=3, hidden_sizes=[64, 32], output_size=2)
+
 
 # Initialize Calendar service
 def get_calendar_service():
@@ -362,6 +367,42 @@ def get_workout_plan():
         return jsonify(workout_plan)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+
+@app.route('/heart_disease_prediction', methods=['POST'])
+def heart_disease_prediction():
+    try:
+        # NOTE: in the format of a list: [bpm, hrv_rmssd, hrv_sdnn]
+        input = request.json.get("input")
+        (output, prob) = predict(input, os.getenv("PT_DIR"))
+        return jsonify({
+            'prediction': output,
+            'probabilities': prob,
+            'status': 'success'
+        })
+    except Exception as e:
+        print(f"Unexpected error: {str(e)}")  # Debug log
+        return jsonify({
+            'error': str(e),
+            'status': 'error'
+        }), 500
+
+@app.route('/get_stress_score', methods=['POST'])
+def get_stress_score():
+    try:
+        data = request.json.get("data")
+        score = get_stress_level(data)
+        return jsonify({
+                'stress_score': score,
+                'status': 'success'
+            })
+    except Exception as e:
+        print(f"Unexpected error: {str(e)}")  # Debug log
+        return jsonify({
+            'error': str(e),
+            'status': 'error'
+        }), 500
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5002, debug=True)
