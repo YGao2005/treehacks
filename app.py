@@ -46,11 +46,11 @@ def get_calendar_service():
         # Create new credentials
         try:
             creds = Credentials(
-                token="ya29.a0AXeO80Sa2qIe3MVAuuKhM2tXcEYajrTTqiTavi5P5wZmZtpyR-EwVhMnJgVE0EnzuqEv_KK1mc2NQXFZLqKr8uk5-6_woneuXY6rgRJTgOoc_dkR9W-FUiRzqLzKBrQ8oXPbSDpUBayalAoUp9rIFyzZWNektOzi0fSUBRQxaCgYKAW4SARISFQHGX2Miw9IJKd0fjDB0oCUydymELw0175",
-                refresh_token="1//04aQEGeyuaraECgYIARAAGAQSNwF-L9IreGihR2MlbfigNcCS47OLsHTVBdWtTG9E8EDAGp-bO91N9jm-2H4P5uXceemf4neP9vA",
+                token="ya29.a0AXeO80QRkuLEL6yzGflFy3-JwuQt6RAHoi_fWnNjYqCAuV1_LWqeM7iJZGh_hbwm5VU0LiBMNojpR2GIevW83xghfOdkMBgPSG8Hvguae9Lp9210sVv3Uzjr1Vp89qYNQP14HudJ5reR2CGu102kTLWytwNr6Ya9deKp6rYJaCgYKAfkSARESFQHGX2MivusCrF_dNJK1MCEvjpA-eQ0175",
+                refresh_token="1//04luznsSLvZ16CgYIARAAGAQSNwF-L9IrL-m8CTXmx-2C6_1HiE39IWwaGfvOzA0MXqC-HysSsWWI9INhzfd4b_XZSkIGUZ28YmU",
                 token_uri="https://oauth2.googleapis.com/token",
-                client_id="43249297252-gb41aitm2le2umtufcorde4qenh4p7jj.apps.googleusercontent.com",
-                client_secret="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",
+                client_id="43249297252-10cvponppasks9p2cunjrttdvq92qbj0.apps.googleusercontent.com",
+                client_secret="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",
                 scopes=SCOPES
             )
 
@@ -240,7 +240,7 @@ Remember:
         }
 
         # First, try to get the calendar ACL to check if your email is already added
-        your_email = "yangg40@g.ucla.com"  # Replace with your actual email
+        your_email = "psdyangg@gmail.com"  # Replace with your actual email
 
         try:
             # Create the calendar event
